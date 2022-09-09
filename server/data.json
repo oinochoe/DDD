@@ -1,0 +1,13 @@
+{
+	"list": [
+		{
+			"id": 1,
+			"title": "안녕하세요",
+			"code": 55,
+			"key": "22",
+			"startDate": "20220510",
+			"endDate": "20220520",
+			"isActive": true
+		}
+	]
+}

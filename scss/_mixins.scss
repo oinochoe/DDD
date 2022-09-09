@@ -1,0 +1,24 @@
+@import './variables';
+
+@mixin font-weight($font-weights-numbers) {
+  @if (map-has-key($font-weights, $font-weights-numbers)) {
+    font-weight: map-get($font-weights, $font-weights-numbers);
+  } @else {
+    @error "font-weight '#{$font-weights-numbers}' is nope.";
+  }
+}
+
+@mixin single-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin multi-ellipsis($line-numbers) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-numbers;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

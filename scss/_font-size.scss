@@ -1,0 +1,34 @@
+html {
+  --basic-font-size-30: 30px;
+  --basic-line-height-30: 1.333;
+  --basic-font-size-29: 29px;
+  --basic-line-height-29: 1.31;
+  --basic-font-size-28: 28px;
+  --basic-line-height-28: 1.321;
+  --basic-font-size-27: 27px;
+  --basic-line-height-27: 1.333;
+  --basic-font-size-26: 26px;
+  --basic-line-height-26: 1.346;
+  --basic-font-size-25: 25px;
+  --basic-line-height-25: 1.36;
+}
+
+$fontSize30: var(--basic-font-size-30);
+$lineHeight30: var(--basic-line-height-30);
+$fontSize29: var(--basic-font-size-29);
+$lineHeight29: var(--basic-line-height-29);
+$fontSize28: var(--basic-font-size-28);
+$lineHeight28: var(--basic-line-height-28);
+$fontSize27: var(--basic-font-size-27);
+$lineHeight27: var(--basic-line-height-27);
+$fontSize26: var(--basic-font-size-26);
+$lineHeight26: var(--basic-line-height-26);
+$fontSize25: var(--basic-font-size-25);
+$lineHeight25: var(--basic-line-height-25);
+
+@mixin font-size($fontSize) {
+  $fontSizeNumber: strip-unit($fontSize);
+
+  font-size: $fontSize;
+  font-size: var(--basic-font-size-#{$fontSizeNumber});
+}
